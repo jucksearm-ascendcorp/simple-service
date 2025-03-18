@@ -123,7 +123,7 @@ class Gateway {
 
 export const post = async (req: Request, res: Response) => {
   const gateway = new Gateway(req.body.url)
-  await gateway.request.get()
+  await gateway.request.get('/')
   res.status(200).send()
   return
 };
